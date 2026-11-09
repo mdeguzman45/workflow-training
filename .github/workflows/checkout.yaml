@@ -1,6 +1,8 @@
 name: Checkout
 on: [push]
 
+# doc: https://github.com/marketplace/actions/checkout
+
 jobs:
   checkout-action:
     runs-on: ubuntu-latest
