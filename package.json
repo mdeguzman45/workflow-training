@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/mdeguzman45/workflow-training/issues"
   },
-  "homepage": "https://github.com/mdeguzman45/workflow-training#readme"
+  "homepage": "https://github.com/mdeguzman45/workflow-training#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
