@@ -8,9 +8,17 @@ on:
         default: "Marc Louis Gene"
         required: false
 jobs:
-  calling-a-reusable-wf:
+  calling-a-reusable-wf-1:
     uses: ./.github/workflows/reusable-workflow.yaml
     with:
       name: ${{ inputs.name }}
     secrets:
       access-token: ${{ secrets.ACCESS_TOKEN }}
+  calling-a-reusable-wf-2:
+    uses: ./.github/workflows/reusable-workflow-2.yaml
+  using-reusable-wf-output:
+    runs-on: ubuntu-latest
+    needs: calling-a-reusable-wf-2
+    steps:
+      - run: echo ${{ needs.calling-a-reusable-wf-2.outputs.date }}
+  
